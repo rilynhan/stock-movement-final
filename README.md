@@ -55,14 +55,14 @@ The corresponding code is located in the `data_preparations` directory.
     do
         torchrun --standalone --nnodes=1 --nproc-per-node=$NUM_GPUS main.py \
             --do_predict \
-            --validation_file /gpfs/radev/project/ying_rex/yz946/stock-movement-prediction/fin_data/jsonl/title_test_slope.json \
-            --test_file /gpfs/radev/project/ying_rex/yz946/stock-movement-prediction/fin_data/jsonl/title_test_slope.json \
+            --validation_file /gpfs/radev/project/ying_rex/yz946/stock-movement-final/fin_data/jsonl/title_test_slope.json \
+            --test_file /gpfs/radev/project/ying_rex/yz946/stock-movement-final/fin_data/jsonl/title_test_slope.json \
             --overwrite_cache \
             --prompt_column instruction \
             --response_column target \
-            --model_name_or_path /gpfs/radev/project/ying_rex/yz946/finnlp-data/chatglm-model/chatglm2-6b \
-            --ptuning_checkpoint /gpfs/radev/project/ying_rex/yz946/finnlp-data/chatglm-model/chatglm2-6b/slope_chatglm2-6b-pt-128-2e-2/checkpoint-$STEP \
-            --output_dir /gpfs/radev/project/ying_rex/yz946/finnlp-data/chatglm-model/fin_model/evaluate_slope_result/checkpoint-$STEP \
+            --model_name_or_path /gpfs/radev/project/ying_rex/yz946/stock-movement-final/chatglm-model/chatglm2-6b \
+            --ptuning_checkpoint /gpfs/radev/project/ying_rex/yz946/stock-movement-final/chatglm-model/chatglm2-6b/slope_chatglm2-6b-pt-128-2e-2/checkpoint-$STEP \
+            --output_dir /gpfs/radev/project/ying_rex/yz946/stock-movement-final/chatglm-model/fin_model/evaluate_slope_result/checkpoint-$STEP \
             --overwrite_output_dir \
             --max_source_length 460 \
             --max_target_length 8 \
