@@ -1,5 +1,5 @@
 
-# CSPC 452 Final Project: Enhancing Financial Forecasting Models with ChatGLM on Scraped Data
+# CSPC 452 Final Project: P-Tuning ChatGLM on Scraped News Data to Predict Trading Strategy on Chinese Stock
 
 This repository contains all code utilized for our final project. All data scraping, data processing, ChatGLM p-tuning, and evaluations can be reproduced using the following steps.
 
